@@ -15,12 +15,12 @@
   justify-content: space-between;
 }
 
-.container {
+/* .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
   flex-grow: 1;
-}
+} */
 
 .footer-nav ul {
   display: flex;
