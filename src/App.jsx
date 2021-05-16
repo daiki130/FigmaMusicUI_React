@@ -1,7 +1,10 @@
-import logo from "./images/logo.png";
-import { Header } from "./components/Header/Header";
-import { Section } from "./components/Section/Main/Section";
 import "./App.css";
+import logo from "./images/logo.png";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Header } from "./components/Header/Header";
+import { Top } from "./components/Main/Top/Top.jsx";
+import { Discover } from "./components/Main/Discover/Discover.jsx";
+import { Join } from "./components/Main/Join/Join.jsx";
 
 const App = () => {
   return (
