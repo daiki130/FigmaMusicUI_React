@@ -1,6 +1,17 @@
+import { useState } from "react";
 import "./Join.css";
 
 export const Join = () => {
+  const [text, setText] = useState();
+  const handleChangeText = (e) => {
+    if (e.target.value >= 20) {
+      return;
+    }
+    setText(() => {
+      return e.target.value.trim();
+    });
+  };
+
   return (
     <>
       <section className="join-main-section">
@@ -11,7 +22,7 @@ export const Join = () => {
         <form className="join-form">
           <div className="input-group">
             <label>Name:</label>
-            <input type="text" />
+            <input type="text" value={text} onChange={handleChangeText} />
           </div>
           <div className="input-group">
             <label>Emaile:</label>
