@@ -1,25 +1,26 @@
 import "./Header.css";
+import { BrowserRouter, Link } from "react-router-dom";
 
 export const Header = (props) => {
   const { logo } = props;
   return (
-    <>
+    <BrowserRouter>
       <header className="main-header">
-        <a href="/" className="brand-logo">
+        <Link to="/" className="brand-logo">
           <img src={logo} width={50} height={50} />
           <div className="brand-logo-name">Soundwave</div>
-        </a>
+        </Link>
         <nav className="main-nav">
           <ul>
             <li>
-              <a href="discover.html">Discover</a>
+              <Link to="/discover">Discover</Link>
             </li>
             <li>
-              <a href="Join.html">Join</a>
+              <Link to="/Join">Join</Link>
             </li>
           </ul>
         </nav>
       </header>
-    </>
+    </BrowserRouter>
   );
 };
