@@ -30,7 +30,14 @@ const App = () => {
           <div className="home-page-circle-2"></div>
           <div className="home-page-circle-3"></div>
         </div>
-        <Footer twitter={twitter} facebook={facebook} />
+        <Switch>
+          <Route path="/discover">
+            <Footer twitter={twitter} facebook={facebook} />
+          </Route>
+          <Route path="/Join">
+            <Footer twitter={twitter} facebook={facebook} />
+          </Route>
+        </Switch>
       </div>
     </BrowserRouter>
   );
