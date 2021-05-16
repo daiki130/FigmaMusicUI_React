@@ -8,15 +8,25 @@ import { Join } from "./components/Main/Join/Join.jsx";
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <div className="container full-height-grow">
         <Header logo={logo} />
-        <Section />
+        <Switch>
+          <Route exact path="/">
+            <Top />
+          </Route>
+          <Route path="/discover">
+            <Discover />
+          </Route>
+          <Route path="/Join">
+            <Join />
+          </Route>
+        </Switch>
         <div className="home-page-circle-1"></div>
         <div className="home-page-circle-2"></div>
         <div className="home-page-circle-3"></div>
       </div>
-    </>
+    </BrowserRouter>
   );
 };
 

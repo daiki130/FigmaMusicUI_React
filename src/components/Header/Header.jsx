@@ -1,10 +1,10 @@
 import "./Header.css";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Header = (props) => {
   const { logo } = props;
   return (
-    <BrowserRouter>
+    <>
       <header className="main-header">
         <Link to="/" className="brand-logo">
           <img src={logo} width={50} height={50} />
@@ -21,6 +21,6 @@ export const Header = (props) => {
           </ul>
         </nav>
       </header>
-    </BrowserRouter>
+    </>
   );
 };
